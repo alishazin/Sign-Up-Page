@@ -1,12 +1,8 @@
 
-function onLoad() {
+function onleavePage() {
     let fields = Array.prototype.slice.call(document.querySelectorAll('.input-container input'));
     for (let x of fields) {
-        if (x.value !== '') {
-            let overlay = (x.parentNode).children[1];
-            overlay.style.transform = `translate(calc(100% - 50px), 0)`;
-            overlay.style.color = 'black';
-        }
+        x.value = '';
     }
 }
 
