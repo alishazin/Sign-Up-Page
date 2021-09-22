@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&effect=fire|neon|outline|emboss|shadow-multiple">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body onload="onLoad()">
+    <div id="container">
+        <h1 onmouseenter="hoverHeader(this)" onmouseleave="unhoverHeader(this)"><span>P</span>ass<span>P</span>ro</h1>
+        <form name="sign-up" action="https://www.w3schools.com/action_page.php">
+            <div title="Enter Your First Name" class="input-container">
+                <input onfocus="controlOverlay(this, 'focus', 'First Name')" onblur="controlOverlay(this, 'blur', 'First Name')" name="fname-field" type="text" autocomplete="name"  maxlength="15" required autofocus>
+                <i onclick="transferFocus(this)" class="bi bi-person"></i>
+            </div>
+            <div title="Enter Your Last Name" class="input-container">
+                <input onfocus="controlOverlay(this, 'focus', 'Last Name')" onblur="controlOverlay(this, 'blur', 'Last Name')" name="lname-field" autocomplete="name" type="text" maxlength="15">
+                <i onclick="transferFocus(this)" class="bi bi-person"></i>
+            </div>
+            <div title="Enter Your Email" class="input-container">
+                <input onfocus="controlOverlay(this, 'focus', 'Email')" onblur="controlOverlay(this, 'blur', 'Email')" name="mail-field" type="text" autocomplete="email" required>
+                <i onclick="transferFocus(this)" class="bi bi-envelope"></i>
+            </div>
+            <div title="Enter Your Password" class="input-container">
+                <input onfocus="controlOverlay(this, 'focus', 'New Password')" onblur="controlOverlay(this, 'blur', 'New Password')" name="password-field" autocomplete="off" type="password" maxlength="30" required>
+                <i style="font-size:1.6em; top:4px;" onclick="transferFocus(this)" class="bi bi-key"></i>
+            </div>
+            <div class="sumbit-container">
+                <p>Already a user? <a href="#">Log In</a></p>
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div> 
+</body>
+</html>

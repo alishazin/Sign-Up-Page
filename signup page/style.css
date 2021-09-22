@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+@keyframes text-animation {
+    0% {
+        background-size: 100%
+    }
+    100% {
+        background-size: 250%;
+    }
+}
+@keyframes text-animation-reverse {
+    0% {
+        background-size: 250%
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+#container {
+    margin: auto;
+    margin-top: 120px;
+    max-width: 450px;
+    border: 2px solid #476098;
+    border-radius: 10px;
+}
+#container h1 {
+    margin: 40px auto;
+    padding: 0;
+    width: fit-content;
+    font-family: "Archivo Black", Arial;
+    font-size: 60px;
+    background-image: linear-gradient(
+        45deg,
+        #CA4246 16%, 
+        #E16541 16%, 
+        #E16541 33%, 
+        #F18F43 33%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66%, 
+        #476098 66%, 
+        #476098 83%, 
+        #A7489B 83%
+    );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#container h1 span {
+    font-size: 1.1em;
+}
+form .input-container {
+    position: relative;
+    width: 70%;
+    margin: 30px auto;
+    overflow: hidden;
+    height: 45px;
+}
+form .input-container input {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    padding-left: 12px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 1em;
+    transition: border 0.5s;
+}
+form .input-container input:focus {
+    border: 2px solid #476098;
+}
+form .input-container i {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    width: 100%;
+    color: #949494;
+    font-family: Verdana;
+    transition: transform 0.4s, color 0.4s;
+    font-size: 1.3em;
+    cursor: text;
+}
+form .sumbit-container {
+    width: 70%;
+    margin: 30px auto;
+    height: fit-content;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70% 30%;
+}
+form .sumbit-container p {
+    text-align: left;
+}
+form .sumbit-container input {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 12px;
+    background-color: #476098;
+    color: white;
+    box-shadow: 0 0 10px #476098;
+    cursor: pointer;
+    transition: box-shadow 0.4s, background-color 0.4s;
+}
+form .sumbit-container input:hover {
+    box-shadow: 0 0 10px #CA4246;
+    background-color: #CA4246;
+}
+form .sumbit-container input:active {
+    background-color: #E16541;
+    box-shadow: 0 0 10px #E16541;
+}
+form p a {
+    color: #8B9862;
+}
+@media (max-width:450px) {
+    #container {
+        margin-top: 50px;
+        max-width: 300px;
+    }
+    #container h1 {
+        font-size: 45px;
+    }
+    form .input-container {
+        width: 80%;
+        margin-bottom: 0;
+    }
+    form .sumbit-container {
+        grid-template-columns: 100%;
+        margin-top: 10px;
+    }
+    form .sumbit-container p {
+        text-align: center;
+    }
+}
